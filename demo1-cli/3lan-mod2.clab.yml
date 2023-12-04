@@ -1,0 +1,36 @@
+name: mod2-play
+
+
+topology:
+  nodes:
+    lan1:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds: 
+      #  - mod2-lan1:/lab-folder
+    lan2:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds: 
+      #  - mod2-lan2:/lab-folder
+    lan3:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds:
+      #  - mod2-lan3:/lab-folder
+
+    rtr:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds: 
+      #  - mod2-rtr:/lab-folder
+
+
+
+  links:
+    - endpoints: ["lan1:eth1", "rtr:eth1"]
+    - endpoints: ["lan2:eth1", "rtr:eth2"]
+    - endpoints: ["lan3:eth1", "rtr:eth3"]
+
+
+

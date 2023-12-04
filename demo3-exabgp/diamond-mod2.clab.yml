@@ -1,0 +1,55 @@
+name: mod2-bgp
+
+
+topology:
+  nodes:
+    lan1:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds: 
+      #  - mod2-lan1:/lab-folder
+
+    rtrA:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      binds:
+        - mod2-bird-confs:/etc/bird-alt/
+    rtrB:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      binds:
+        - mod2-bird-confs:/etc/bird-alt/
+    rtrC:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      binds:
+        - mod2-bird-confs:/etc/bird-alt/
+    rtrD:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      binds:
+        - mod2-bird-confs:/etc/bird-alt/
+
+
+
+
+    lan2:
+      kind: linux
+      image: ekellercu/network-testing:v0.1
+      #binds: 
+      #  - mod2-lan2:/lab-folder
+
+  links:
+    - endpoints: ["lan1:eth1", "rtrA:eth1"]
+
+    - endpoints: ["rtrA:eth2", "rtrB:eth1"]
+    - endpoints: ["rtrA:eth3", "rtrC:eth1"]
+
+    - endpoints: ["rtrD:eth2", "rtrB:eth2"]
+    - endpoints: ["rtrD:eth3", "rtrC:eth2"]
+
+    - endpoints: ["lan2:eth1", "rtrD:eth1"]
+
+
+
+
