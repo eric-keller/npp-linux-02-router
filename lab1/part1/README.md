@@ -118,4 +118,12 @@ The output file (submission.out) should look like:
 [output of traceroute (from lan1 to lan2) - part2]
 ```
 
+# Troubleshooting
+
+If you are not seeing the rtrB - rtrC peering as Established (in both rtrB and rtrC), check these.
+- Did you set the IP addresses correctly (of rtrB eth3 and rtrC eth3)
+- Did you set the neigbor IP addresses correctly?  (the BtoC peering on rtrB should have the address as rtrC eth3's IP).
+- Did you set the AS number of the neighbor correctly.  rtrB is AS 65001, rtrC is AS 65002.
+
+
 
