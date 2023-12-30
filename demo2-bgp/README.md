@@ -11,6 +11,7 @@ Provided is a containerlab topology configuration file called diamond-mod2.clab.
 ```
 sudo containerlab deploy
 ```
+Note: when you are done and want to teardown the lab setup, run `sudo containerlab destroy`
 
 Also provided is a script that will set aliases for the docker commands to execute commands inside of each container.
 

@@ -28,7 +28,7 @@ rtrA also had it's bird configuration (rtrA-bird.conf) change - adding the peeri
 
 # Running ExaBGP
 
-Once the topology is set up, you can run ExaBGP but running the exabgp command inside of the lan1 container and specifying to use the exa.conf provided.
+Once the topology is set up, you can run ExaBGP by running the exabgp command inside of the lan1 container and specifying to use the exa.conf provided.
 
 ```
 lan1 exabgp -v /etc/bird-alt/exa.conf

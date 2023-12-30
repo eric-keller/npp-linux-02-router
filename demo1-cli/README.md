@@ -8,6 +8,8 @@ Provided is a containerlab topology configuration file (3lan-mod2.clab.yml) with
 sudo containerlab deploy
 ```
 
+Note: when you are done and want to teardown the lab setup, run `sudo containerlab destroy`
+
 There are 3 example scripts provided, that each illustrate one thing.  Each script provides a `create` function and a `delete` function, which allows you to run a script to create a setup, then delete that setup, then do that again with another script.
 
 ```
