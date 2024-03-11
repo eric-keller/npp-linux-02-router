@@ -22,8 +22,8 @@ lan1 traceroute -s 1.1.1.1 4.4.4.4
 # Lab Task - Part 1
 
 Extend the topology to include a link and peering between rtrB and rtrC.  Use the interface eth3 for each.  And set the IP addresses as follows:
-- rtrB eth3 = 10.10.4.1
-- rtrC eth3 = 10.10.4.2
+- rtrB eth3 = 10.10.6.2
+- rtrC eth3 = 10.10.6.1
 
 To do this, you will need to edit the files as follows:
 - diamond-mod2.clab.yml - create a new link
