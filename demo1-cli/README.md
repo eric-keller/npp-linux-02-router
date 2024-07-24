@@ -69,7 +69,7 @@ lan1 ping -I 10.0.1.3 10.0.3.3
 ```
 
 
-# Example 4: setup-ip.ex4.sh 
+# Example 4: setup-ip-ex4.sh 
 
 
 Illustrates setting up a GRE tunnel.  
