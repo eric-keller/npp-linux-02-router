@@ -96,12 +96,12 @@ A script is provided (capture_submission.sh) that you run in two parts.
 Do Part 1.  Then run
 
 ```
-./capture_submission part1
+./capture_submission.sh part1
 ```
 
 Then do Part 2.  Then run
 ```
-./capture_submission part2
+./capture_submission.sh part2
 ```
  
 
