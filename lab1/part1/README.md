@@ -31,7 +31,7 @@ To do this, you will need to edit the files as follows:
 - rtrC-bird.conf - add the peering to rtrB.  Use the existing BtoA peering as a template, just update the neighbor.
 - setup-ip-diamond.sh - set the IP address and route table entry of rtrB eth3 and rtrC eth3
 
-To test, look at the routing table and peerings of of rtrB and rtrC.  You should see B as a neighbor of C (and C a neihbor of B).  You should see an extra route (in addition to seeing C to D, you should see C to B to D, which won't get chosen).
+To test, look at the routing table and peerings of of rtrB and rtrC.  You should see B as a neighbor of C (and C a neighbor of B).  You should see an extra route (in addition to seeing C to D, you should see C to B to D, which won't get chosen).
 
 If you used the same naming convention, you should see a line like the following after running `rtrB birdc show protocols`
 ```
@@ -89,7 +89,7 @@ lan1 traceroute -s 1.1.1.1 4.4.4.4
 
 # Submission
 
-The submission will consist running  set of commands following the completion of Part 1 (so, when you created a link and peering between B and C, but before you failed the links).  Then caputing the output for another command after performing part 2 (after you failed links AB and CD).  The output will go to submission.out - which is what you will submit.
+The submission will consist running a set of commands following the completion of Part 1 (so, when you created a link and peering between B and C, but before you failed the links).  Then capturing the output for another command after performing part 2 (after you failed links AB and CD).  The output will go to submission.out - which is what you will submit.
 
 A script is provided (capture_submission.sh) that you run in two parts.
 
@@ -122,7 +122,7 @@ The output file (submission.out) should look like:
 
 If you are not seeing the rtrB - rtrC peering as Established (in both rtrB and rtrC), check these.
 - Did you set the IP addresses correctly (of rtrB eth3 and rtrC eth3)
-- Did you set the neigbor IP addresses correctly?  (the BtoC peering on rtrB should have the address as rtrC eth3's IP).
+- Did you set the neighbor IP addresses correctly?  (the BtoC peering on rtrB should have the address as rtrC eth3's IP).
 - Did you set the AS number of the neighbor correctly.  rtrB is AS 65001, rtrC is AS 65002.
 
 

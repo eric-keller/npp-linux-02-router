@@ -5,9 +5,10 @@ topology:
   nodes:
     lan1:
       kind: linux
-      image: ekellercu/network-testing:v0.1
-      #binds: 
-      #  - mod2-lan1:/lab-folder
+      image: exagbp
+      binds:
+        - mod2-bird-confs:/etc/bird-alt/
+      entrypoint: /bin/bash
 
     rtrA:
       kind: linux
