@@ -5,7 +5,7 @@ topology:
   nodes:
     lan1:
       kind: linux
-      image: exagbp
+      image: exabgp
       binds:
         - mod2-bird-confs:/etc/bird-alt/
       entrypoint: /bin/bash
